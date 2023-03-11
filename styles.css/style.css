@@ -1,1 +1,83 @@
-@import 'reset.css'
+@import 'reset.css';
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #353945;
+  background-color: lavender;
+}
+
+.wrapper {
+margin: 0 auto;
+width: 500px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: rgb(130, 130, 178);
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: lavender;
+  cursor: pointer;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.tab-content img{
+  display: block;
+  margin: 0 auto;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+
+.tab input[type=radio] + label::after {
+  content: "+";
+}
+.tab input[type=radio]:checked + label::after {
+  transform: rotate(315deg);
+}
+
+
