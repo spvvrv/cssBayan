@@ -9,9 +9,10 @@ body {
 }
 
 .wrapper {
-margin: 0 auto;
-width: 500px;
+  margin: 0 auto;
+  width: 500px;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -24,9 +25,11 @@ h1 {
   width: 100%;
   color: #fff;
 }
+
 .tab input {
   display: none;
 }
+
 .tab label {
   display: block;
   padding: 0 0 0 1em;
@@ -35,6 +38,7 @@ h1 {
   line-height: 3;
   cursor: pointer;
 }
+
 .tab label:hover {
   color: rgb(236, 193, 141);
 }
@@ -48,20 +52,25 @@ h1 {
   -o-transition: max-height .35s;
   transition: max-height .35s;
 }
-.tab-content img{
+
+.tab-content img {
   display: block;
   margin: 0 auto;
 }
+
 .tab-content p {
   margin: 1em;
 }
+
 /* :checked */
-.tab input:checked ~ .tab-content {
+.tab input:checked~.tab-content {
   max-height: 100vh;
 }
-.tab input:checked ~ .tab-content {
+
+.tab input:checked~.tab-content {
   max-height: 100vh;
 }
+
 /* Icon */
 .tab label::after {
   position: absolute;
@@ -78,14 +87,15 @@ h1 {
 }
 
 
-.tab input[type=checkbox] + label::after {
+.tab input[type=checkbox]+label::after {
   content: "+";
   display: none;
 }
-.tab input[type=checkbox] + label:hover::after {
+
+.tab input[type=checkbox]+label:hover::after {
   display: block;
 }
 
-.tab input[type=checkbox]:checked + label::after {
+.tab input[type=checkbox]:checked+label::after {
   transform: rotate(315deg);
 }
