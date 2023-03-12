@@ -1,9 +1,11 @@
 @import 'reset.css';
+@import 'media.css';
 
 body {
   font-family: 'Times New Roman', Times, serif;
   color: #353945;
   background-color: lavender;
+  font-size: 20px;
 }
 
 .wrapper {
@@ -14,6 +16,7 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-size: 3em;
 }
 /* Acordeon styles */
 .tab {
@@ -38,7 +41,7 @@ h1 {
   cursor: pointer;
 }
 .tab label:hover {
-  color: bisque;
+  color: rgb(236, 193, 141);
 }
 
 .tab-content {
