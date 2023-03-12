@@ -37,6 +37,10 @@ h1 {
   line-height: 3;
   cursor: pointer;
 }
+.tab label:hover {
+  color: bisque;
+}
+
 .tab-content {
   max-height: 0;
   overflow: hidden;
@@ -57,6 +61,9 @@ h1 {
 .tab input:checked ~ .tab-content {
   max-height: 100vh;
 }
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
 /* Icon */
 .tab label::after {
   position: absolute;
@@ -73,10 +80,14 @@ h1 {
 }
 
 
-.tab input[type=radio] + label::after {
+.tab input[type=checkbox] + label::after {
   content: "+";
+  display: none;
 }
-.tab input[type=radio]:checked + label::after {
-  transform: rotate(315deg);
+.tab input[type=checkbox] + label:hover::after {
+  display: block;
 }
 
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
