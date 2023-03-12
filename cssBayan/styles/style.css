@@ -20,20 +20,26 @@ h1 {
   font-size: 3em;
 }
 
+/* Acordeon styles */
 .tab {
+  position: relative;
   margin-bottom: 1px;
   width: 100%;
   color: #fff;
+  overflow: hidden;
 }
 
 .tab input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
 .tab label {
+  position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: rgb(130, 130, 178);
+  background: rgb(130, 130, 179);
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
