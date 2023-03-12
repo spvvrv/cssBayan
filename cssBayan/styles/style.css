@@ -18,21 +18,16 @@ h1 {
   margin-top: 20px;
   font-size: 3em;
 }
-/* Acordeon styles */
+
 .tab {
-  position: relative;
   margin-bottom: 1px;
   width: 100%;
   color: #fff;
-  overflow: hidden;
 }
 .tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+  display: none;
 }
 .tab label {
-  position: relative;
   display: block;
   padding: 0 0 0 1em;
   background: rgb(130, 130, 178);
